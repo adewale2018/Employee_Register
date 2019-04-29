@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import './Form.css';
 class Form extends Component {
   constructor(props){
     super(props);
@@ -36,16 +37,13 @@ class Form extends Component {
       city: "",
       sta: "",
       msg: ""
-
     })
   }
   render() {
     return(
       <div className="Form-container">
-        <h1 className="Form-title">Employees Register </h1>
         <form className="Form">
-        <h2 className="Form-h2">Create/Edit</h2>
-          <div className="Form-input-full">
+          <div>
             <input 
               type="text"
               id="name"
@@ -54,10 +52,10 @@ class Form extends Component {
               placeholder="Name"
               required="required"
               onChange={this.changeHandler}
-              className="Form-fullname"
+              className="Form-fullname Form-common"
             />
           </div>
-          <div>
+          <div className="Form-age-dob-phone">
             <input 
               type="number" 
               id="age"
@@ -66,7 +64,7 @@ class Form extends Component {
               placeholder="Age"
               required="required"
               onChange={this.changeHandler}
-              className="Form-num"
+              className="Form-num age Form-common"
             />
             <input 
               type="date" 
@@ -76,7 +74,7 @@ class Form extends Component {
               placeholder="Date of Birth"
               required="required"
               onChange={this.changeHandler}
-              className="Form-num"
+              className="Form-num dob Form-common"
             />
             <input 
               type="number" 
@@ -86,10 +84,10 @@ class Form extends Component {
               placeholder="Phone number"
               required="required"
               onChange={this.changeHandler}
-              className="Form-num"
+              className="Form-num phone Form-common"
             />
           </div>
-          <div>
+          <div className="Form-cpf-rg">
             <input 
               type="number" 
               id="cpf"
@@ -98,20 +96,20 @@ class Form extends Component {
               placeholder="CPF"
               required="required"
               onChange={this.changeHandler}
-              className="Form-num"
+              className="Form-num2 cpf Form-common"
             />
             <input 
               type="number" 
               id="rg"
-              name="RG"
+              name="rg"
               value={this.state.rg}
               placeholder="RG"
               required="required"
               onChange={this.changeHandler}
-              className="Form-num"
+              className="Form-num2 Form-rg Form-common"
             />
           </div>
-          <div>
+          <div className="Form-adrs-num">
             <input 
               type="text" 
               id="adrs"
@@ -120,7 +118,7 @@ class Form extends Component {
               placeholder="Address"
               required="required"
               onChange={this.changeHandler}
-              className="Form-adrs"
+              className="Form-adrs Form-common"
             />
             <input 
               type="number" 
@@ -130,10 +128,10 @@ class Form extends Component {
               placeholder="Number"
               required="required"
               onChange={this.changeHandler}
-              className="Form-no"
+              className="Form-no Form-common"
             />
           </div>
-          <div>
+          <div className="Form-city-state">
             <input 
               type="text" 
               id="city"
@@ -142,7 +140,7 @@ class Form extends Component {
               placeholder="City"
               required="required"
               onChange={this.changeHandler}
-              className="Form-city"
+              className="Form-city Form-common"
               
             />
             <input 
@@ -153,24 +151,25 @@ class Form extends Component {
               placeholder="State"
               required="required"
               onChange={this.changeHandler}
-              className="Form-state"
+              className="Form-state Form-common"
             />
           </div>
-          <div>
+          <div className="Form-text">
             <textarea
               id="msg"
               name="msg" 
               value={this.state.msg}
               rows="5"
-              cols="20"
+              cols="10"
+              placeholder="Message"
               required="required"
               onChange={this.changeHandler}
               className="Form-msg"
             />
           </div>
-          <div className="Btn-div">
-            <button className="Btn-save Form-Btn">Save</button>
-            <button className="Btn-cancel Form-Btn">Cancel</button>
+          <div className="Form-Btn">
+            <button className="Btn save">Save</button>
+            <button className="Btn cancel">Cancel</button>
           </div>
         </form>
       </div>
