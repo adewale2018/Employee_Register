@@ -1,19 +1,41 @@
-.Link {
-  text-align: right;
-  margin-top: 2em;
+.App-nav {
+  display: flex;
+  justify-content: flex-end;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 5px;
+  margin: 10px 15px 0 0;
 }
-.Link a {
+
+.active-link {
+  color: orange;
+}
+
+a {
+  font-size: 1.5rem;
   text-decoration: none;
-  color: #fff;
-  text-transform: uppercase;
-  margin-right: 3em;
-  background-color: orange;
-  padding: 8px;
-  border: 1px solid #fff;
-  border-radius: 2px;
+  color: white;
+  transition: all 0.4s ease-out;
+  margin-left: 1em;
 }
+
+.App-nav a:hover {
+  color: orange;
+  cursor: pointer;
+}
+
 @media (max-width: 425px) {
-  .Link {
-    margin-right: 1em;
+  .App-nav {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1em;
+    padding: 0;
   }
+  a {
+    font-size: 2rem;
+    margin-left: 0.5em;
+  }
+  a:hover {
+    cursor: pointer;
+  }
+  
 }
