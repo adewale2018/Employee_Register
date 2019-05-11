@@ -17,6 +17,9 @@ const initialState = {
   sta: "",
   msg: ""
 };
+
+const EMPLOYEES_DATA_KEY = "EmployeesData";
+  
 class Form extends Component {
   constructor(props) {
     super(props);
@@ -34,9 +37,17 @@ class Form extends Component {
 
   saveHandler(event) {
     event.preventDefault();
+
+    let EmployeesDataLS = JSON.parse(localStorage.getItem(EMPLOYEES_DATA_KEY));
+    if (EmployeesDataLS == null) {
+      EmployeesDataLS = [];
+    }
+
+    EmployeesDataLS.push(this.state);
+
     const saveDatas = localStorage.setItem(
-      "EmployeesData",
-      JSON.stringify(this.state)
+      EMPLOYEES_DATA_KEY,
+      JSON.stringify(EmployeesDataLS)
     );
     alert("Data successfully saved to database");
     this.setState({ ...initialState });
