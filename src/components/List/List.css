@@ -1,18 +1,35 @@
 .List {
- color: #fff;
-}
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
+	color: #fff;
 }
 
-td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
+.List-buttons {
+	flex-shrink: 0;
+	padding-left: 0.7em;
+}
+.List-buttons button {
+	border: none;
+	font-size: 1em;
+	margin: 0.4em;
+	background: none;
+	-webkit-appearance: none;
+	cursor: pointer;
+	color: #fff;
+	outline: none;
+}
+table {
+	font-family: arial, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+td,
+th {
+	border: 1px solid #fff;
+	text-align: left;
+	padding: 8px;
 }
 
 tr:nth-child(even) {
-  background-color: #dddddd;
+	background-color: gray;
+	color: #000;
 }
