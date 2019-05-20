@@ -1,0 +1,135 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+}
+.Form {
+  width: 95%;
+  margin: 0 auto;
+  border: 1px solid #eee;
+  box-shadow: 0 2px 2px #ccc;
+  border-radius: 4px;
+  padding: 1em;
+}
+.Form-container {
+  padding: 1em;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.Form-fullname {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+}
+.Form-age-dob-phone {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+.Form-common {
+  font-size: 1.2em;
+  font-weight: 500;
+  padding: 10px;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+  border-radius: 3px;
+  color: #f15731;
+  border: 0;
+}
+.Form-num,
+.Form-num2 {
+  width: 33%;
+}
+.Form-cpf-rg {
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+}
+.Form-rg {
+  margin-left: 7px;
+}
+.Form-adrs-num {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+.Form-adrs {
+  width: 85%;
+}
+.Form-no {
+  width: 14.5%;
+}
+.Form-city-state {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+.Form-city,
+.Form-state {
+  width: 49%;
+}
+.Form-text {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.Form-msg {
+  width: 100%;
+  padding: 10px;
+  font-size: 1.5em;
+}
+.Form-Btn {
+  display: flex;
+  justify-content: flex-end;
+  align-content: center;
+  margin-top: 5px;
+}
+.Btn {
+  padding: 10px 20px;
+  color: #fff;
+  background-color: steelblue;
+  font-size: 1.5rem;
+  border: 2px solid orange;
+  border-radius: 8px;
+}
+.cancel {
+  margin-left: 5px;
+  color: #fff;
+}
+.save {
+  color: orange;
+}
+.save:hover {
+  color: #fff;
+  background: orange;
+  cursor: pointer;
+  border: 2px solid #fff;
+}
+.cancel:hover {
+  color: #fff;
+  background: red;
+  cursor: pointer;
+  border: 2px solid #fff;
+}
+
+@media (max-width: 425px) { 
+  .Form-container, .Form-age-dob-phone, .Form-cpf-rg, .Form-adrs-num,.Form-city-state {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 5px;
+  }
+  .Form-num, .Form-num2, .Form-common {
+    width: 100%;
+  }
+  .Form-rg{
+    margin-left: 0;
+  }
+  .Btn {
+    font-size: 1rem;
+  }
+ }
